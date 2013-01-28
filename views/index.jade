@@ -1,0 +1,15 @@
+extends layout
+ 
+block body
+  div
+    h2 iCheckGames
+    ul
+      li
+        a(href='/') Home
+      li
+        a(href='api/addGame') Add a new game
+        
+    div(ng-view)
+    
+  script(src='js/angular/angular.js')
+  script(src='js/controller.js')

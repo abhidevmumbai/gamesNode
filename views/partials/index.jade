@@ -1,0 +1,15 @@
+p There are {{posts.length}} games
+div(ng-repeat='game in games')
+  h3 {{game.title}}
+  div {{game.genre}}
+  div {{game.developer}}
+  div {{game.publisher}}
+  div {{game.release_date}}
+  div {{game.description}}
+  div {{game.picture}}
+
+  a(href='readGame/{{game.id}}') More
+  |  - 
+  a(href='editGame/{{game.id}}') Edit
+  |  - 
+  a(href='deleteGame/{{game.id}}') Delete
