@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>iCheckGames</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your games">
+    <meta name="author" content="abhidev">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../lib/socket.io/socket.io.js"></script>
+    <script>
+// UNCOMMENT THIS CODE IF YOU USE THE "serverwithanalytics" SERVER
+//        var socket = io.connect();
+//        socket.on('connect', function () {
+//            socket.send(window.location.href);
+//        });
+//        window.onhashchange = function () {
+//            socket.send(window.location.href);
+//        }
+    </script>
+
+</head>
+
+<body>
+
+<div class="header"></div>
+
+<div class="container">
+
+    <div class="row-fluid">
+        <div id="content" class="span12>"></div>
+    </div>
+
+    <footer class="footer">
+        <p class="pull-right"><a href="#">Back Home</a></p>
+        <p>Followed on the foot steps of <a href="http://coenraets.org" target="_blank">Christophe Coenraets</a> nodecellar webapp built with 
+            <a href="http://documentcloud.github.com/backbone/">Backbone.js</a>,
+            <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>,
+            <a href="http://nodejs.org/">Node.js</a>,
+            <a href="http://expressjs.com/">Express</a>,
+            and <a href="http://www.mongodb.org/">MongoDB</a>
+        </p>
+    </footer>
+
+</div>
+<!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="lib/backbone-min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+
+<script src="js/utils.js"></script>
+<script src="js/models/models.js"></script>
+<script src="js/views/paginator.js"></script>
+<script src="js/views/header.js"></script>
+<script src="js/views/home.js"></script>
+<script src="js/views/gamelist.js"></script>
+<script src="js/views/gamedetails.js"></script>
+<script src="js/views/about.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
