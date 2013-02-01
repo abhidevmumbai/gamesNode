@@ -1,5 +1,9 @@
 window.Game = Backbone.Model.extend({
 	urlRoot: "/games",
+	idAttribute: "_id",
+	initialize: function(){
+		console.log("Game model init");
+	},
 	defaults: {
 		_id: null,
 		title: "",

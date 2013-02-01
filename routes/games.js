@@ -11,8 +11,9 @@ db.open(function(err, db){
     //console.log(db);
 	if(!err){
 		console.log('Connected to iCheckGames(gamesdb) DB');
-		db.createCollection('games', function(err, collection){
+		db.collection('games', function(err, collection){
             //console.log(collection);
+            populateDb();
 			if(err){
 				console.log("The 'games' collection doesn't exist. Creating it with sample data.");
 				populateDb();
@@ -103,17 +104,71 @@ var populateDb = function() {
             developer: 'Ninja Theory',
             publisher: 'Capcom',
             release_date: 'Jan 25, 2013',
-            description: 'The aromas of fruit and spice...',
-            picture: 'dmc.jpg'
+            description: 'DMC',
+            picture: 'dmc-devil-may-cry.jpg'
         },
         {
-            title: 'DmC Devil May Cry',
+            title: "Assassin's Creed - III",
             genre: 'Action',
-            developer: 'Ninja Theory',
-            publisher: 'Capcom',
-            release_date: 'Jan 25, 2013',
-            description: 'The aromas of fruit and spice...',
-            picture: 'dmc.jpg'
+            developer: '',
+            publisher: 'Ubisoft',
+            release_date: 'Oct 30, 2012',
+            description: 'AC3',
+            picture: 'assassin-s-creed-iii.jpg'
+        },
+        {
+            title: 'Call of Duty - Black Ops II',
+            genre: 'Shooter',
+            developer: 'Treyarch',
+            publisher: 'Activision',
+            release_date: 'Nov 13, 2012',
+            description: 'COD-BO 2',
+            picture: 'call-of-duty-black-ops-ii.jpg'
+        },
+        {
+            title: 'Far Cry 3',
+            genre: 'First person Shooter',
+            developer: 'Ubisoft Montreal',
+            publisher: 'Ubisoft',
+            release_date: 'Dec 4, 2012',
+            description: 'FC3',
+            picture: 'far-cry-3-the-lost-expeditions.jpg'
+        },
+        {
+            title: 'God of War 3',
+            genre: 'Action',
+            developer: 'Sony Santa Monica',
+            publisher: 'Sony Computer Entertainment America',
+            release_date: 'Dec 3, 2012',
+            description: 'GOW-3',
+            picture: 'god-of-war-iii.jpg'
+        },
+        {
+            title: 'Hitman - Absolution',
+            genre: 'Action',
+            developer: 'IO Interactive',
+            publisher: 'Square Enix',
+            release_date: 'Nov 20, 2012',
+            description: 'Hitman',
+            picture: 'hitman-absolution.jpg'
+        },
+        {
+            title: 'Max Payne 3',
+            genre: 'Action',
+            developer: 'Rockstar Studios',
+            publisher: 'Rockstar Games',
+            release_date: 'June 1, 2012',
+            description: 'Max Payne',
+            picture: 'max-payne-3.jpg'
+        },
+        {
+            title: 'Sleeping dogs',
+            genre: 'Action',
+            developer: 'United Front Games',
+            publisher: 'Square Enix',
+            release_date: 'Aug 14, 2012',
+            description: 'Sleeping Dogs',
+            picture: 'sleeping-dogs-2.jpg'
         }
     ];
  
