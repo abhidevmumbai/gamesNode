@@ -46,7 +46,7 @@ exports.findAll = function(req, res){
 };
 
 exports.addGame = function(req, res) {
-    var wine = req.body;
+    var game = req.body;
     console.log('Adding game: ' + JSON.stringify(game));
     db.collection('wines', function(err, collection) {
         collection.insert(game, {safe:true}, function(err, result) {
@@ -61,8 +61,10 @@ exports.addGame = function(req, res) {
 };
 exports.updateGame = function(req, res){
 	var id = req.params.id;
+    var game = req.body;
+    delete game._id;
 	console.log('Updating game: '+ id);
-
+    console.log(JSON.stringify(game));
 	db.collection('games', function(err, collection){
         collection.update({'_id':new BSON.ObjectID(id)}, game, function(err, result){
             if (err) {
