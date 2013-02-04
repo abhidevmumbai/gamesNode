@@ -48,7 +48,7 @@ exports.findAll = function(req, res){
 exports.addGame = function(req, res) {
     var game = req.body;
     console.log('Adding game: ' + JSON.stringify(game));
-    db.collection('wines', function(err, collection) {
+    db.collection('games', function(err, collection) {
         collection.insert(game, {safe:true}, function(err, result) {
             if (err) {
                 res.send({'error':'An error has occurred'});
