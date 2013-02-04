@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="span8">
 
-                    <div class="control-group">
+                    <div class="control-group" style="display:none;">
                         <label for="gameId" class="control-label">Id:</label>
 
                         <div class="controls">
@@ -29,10 +29,52 @@
                     </div>
 
                     <div class="control-group">
+                        <label for="genre" class="control-label">Genre:</label>
+
+                        <div class="controls">
+                            <select class="input-small" id="genre" name="genre" value="<%= genre %>">
+                                <option
+                                <%= genre == 'Third Person Shooter'?'selected':'' %>>First Person Shooter</option>
+                                <option
+                                <%= genre == 'Third Person Shooter'?'selected':'' %>>Third Person Shooter</option>
+                                <option
+                                <%= genre == 'Action'?'selected':'' %>>Action</option>
+                                <option
+                                <%= genre == 'Adventure'?'selected':'' %>>Adventure</option>
+                                <option
+                                <%= genre == 'Roleplaying'?'selected':'' %>>Roleplaying</option>
+                                <option
+                                <%= genre == 'Simulation'?'selected':'' %>>Simulation</option>
+                                <option
+                                <%= genre == 'Strategy'?'selected':'' %>>Strategy</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="developer" class="control-label">Developer:</label>
+
+                        <div class="controls">
+                            <input type="text" id="developer" name="developer" value="<%= developer %>"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="publisher" class="control-label">Publisher:</label>
+
+                        <div class="controls">
+                            <input type="text" id="publisher" name="publisher" value="<%= publisher %>"/>
+                            <span class="help-inline"></span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
                         <label for="release_date" class="control-label">Release Date:</label>
 
                         <div class="controls">
                             <select class="input-small" id="release_date" name="release_date" value="<%= release_date %>">
+                                <option
+                                <%= release_date == 2012?'selected':'' %>>2013</option>
                                 <option
                                 <%= release_date == 2012?'selected':'' %>>2012</option>
                                 <option
@@ -45,6 +87,40 @@
                                 <%= release_date == 2008?'selected':'' %>>2008</option>
                                 <option
                                 <%= release_date == 2007?'selected':'' %>>2007</option>
+                                <option
+                                <%= release_date == 2006?'selected':'' %>>2006</option>
+                                <option
+                                <%= release_date == 2005?'selected':'' %>>2005</option>
+                                <option
+                                <%= release_date == 2004?'selected':'' %>>2004</option>
+                                <option
+                                <%= release_date == 2003?'selected':'' %>>2003</option>
+                                <option
+                                <%= release_date == 2002?'selected':'' %>>2002</option>
+                                <option
+                                <%= release_date == 2001?'selected':'' %>>2001</option>
+                                <option
+                                <%= release_date == 2000?'selected':'' %>>2000</option>
+                                <option
+                                <%= release_date == 1999?'selected':'' %>>1999</option>
+                                <option
+                                <%= release_date == 1998?'selected':'' %>>1998</option>
+                                <option
+                                <%= release_date == 1997?'selected':'' %>>1997</option>
+                                <option
+                                <%= release_date == 1996?'selected':'' %>>1996</option>
+                                <option
+                                <%= release_date == 1995?'selected':'' %>>1995</option>
+                                <option
+                                <%= release_date == 1994?'selected':'' %>>1994</option>
+                                <option
+                                <%= release_date == 1993?'selected':'' %>>1993</option>
+                                <option
+                                <%= release_date == 1992?'selected':'' %>>1992</option>
+                                <option
+                                <%= release_date == 1991?'selected':'' %>>1991</option>
+                                <option
+                                <%= release_date == 1990?'selected':'' %>>1990</option>
                             </select>
                         </div>
                     </div>

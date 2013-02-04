@@ -7,6 +7,15 @@ window.Game = Backbone.Model.extend({
         this.validators.title = function (value) {
             return value.length > 0 ? {isValid: true} : {isValid: false, message: "You must enter a Game title"};
         };
+
+        this.validators.developer = function (value) {
+            return value.length > 0 ? {isValid: true} : {isValid: false, message: "You must enter the name of the Developer"};
+        };
+
+        this.validators.publisher = function (value) {
+            return value.length > 0 ? {isValid: true} : {isValid: false, message: "You must enter the name of the Publisher"};
+        };
+
     },
 
     validateItem: function (key) {
