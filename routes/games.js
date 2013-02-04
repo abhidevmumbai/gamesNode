@@ -11,9 +11,10 @@ db.open(function(err, db){
     //console.log(db);
 	if(!err){
 		console.log('Connected to iCheckGames(gamesdb) DB');
+        //todo: currently this doesn't worka as expected
 		db.collection('games', function(err, collection){
             //console.log(collection);
-            populateDb();
+            //populateDb();
 			if(err){
 				console.log("The 'games' collection doesn't exist. Creating it with sample data.");
 				populateDb();
@@ -65,7 +66,7 @@ exports.updateGame = function(req, res){
 	db.collection('games', function(err, collection){
         collection.update({'_id':new BSON.ObjectID(id)}, game, function(err, result){
             if (err) {
-                console.log('Error updating wine: ' + err);
+                console.log('Error updating game: ' + err);
                 res.send({'error':'An error has occurred'});
             } else {
                 console.log('' + result + ' document(s) updated');
