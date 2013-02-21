@@ -1,6 +1,7 @@
 var AppRouter = Backbone.Router.extend({
 	routes:{
 		"": "home",
+		"login": "login",
 		"games":"list",
 		"games/page/:page":"list",
 		"games/add":"addGame",
@@ -16,6 +17,12 @@ var AppRouter = Backbone.Router.extend({
 			this.homeView = new HomeView();
 		}
 		$('#content').html(this.homeView.el);
+	},
+	login: function(){
+		if(!this.LoginView){
+			this.loginView = new LoginView();
+		}
+		$('#content').html(this.loginView.el);
 	},
 	list: function(page){
 		var p = page ? parseInt(page,10) : 1;
@@ -45,7 +52,7 @@ var AppRouter = Backbone.Router.extend({
 });
 
 
-utils.loadTemplate(['HomeView', 'HeaderView', 'GameView', 'GameListItemView', 'AboutView'], function() {
+utils.loadTemplate(['HomeView','LoginView', 'HeaderView', 'GameView', 'GameListItemView', 'AboutView'], function() {
     app = new AppRouter();
     Backbone.history.start();
 });

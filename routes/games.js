@@ -11,6 +11,19 @@ db.open(function(err, db){
     //console.log(db);
 	if(!err){
 		console.log('Connected to iCheckGames(gamesdb) DB');
+        /*User collection
+        db.createCollection('users', function(err, collection){
+            //Add the admin user
+            var users = [
+                {
+                   username: 'admin',
+                   password: 'admin'
+                }
+            ];
+            collection.insert(users, function(err, result) {
+                console.log('Users added in users collection');
+            });
+        });*/
         //todo: currently this doesn't worka as expected
 		db.collection('games', function(err, collection){
             //console.log(collection);
@@ -23,6 +36,8 @@ db.open(function(err, db){
 
 	}
 });
+
+User = db.collection('users');
 
 exports.findById = function(req, res){
 	var id = req.params.id;
@@ -37,7 +52,6 @@ exports.findById = function(req, res){
 
 exports.findAll = function(req, res){
 	console.log('Retreiving all game');
-
 	db.collection('games', function(err, collection){
         collection.find().toArray(function(err, items){
             res.send(items);
