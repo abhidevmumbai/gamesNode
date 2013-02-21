@@ -1,0 +1,29 @@
+<div class="row-fluid">
+    <form class="form-horizontal span12" action="/user/auth" method="Post">
+        <fieldset>
+            <legend>Login</legend>
+            <br/>
+
+            <div class="row">
+                <div class="control-group">
+                    <label for="username" class="control-label">Username/Email:</label>
+                    <div class="controls">
+                        <input id="username" name="username" type="text" required />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="control-group">
+                    <label for="password" class="control-label">Password:</label>
+                    <div class="controls">
+                        <input id="password" name="password" type="password" required />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-actions">
+            <input type="submit" class="btn btn-primary" value="Login" />
+            <a href="/register" class="btn btn-primary">Register</a>
+        </div>
+    </form>
+</div>
